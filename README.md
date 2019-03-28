@@ -2,6 +2,7 @@
 A Slack bot to get the weather by city name
 
 ### Usage
+  - You will need to a ```.env``` file in the root dir with the following ```OPEN_WEATHER_API_KEY='your api key'``` to run this bot.
   - Usage is simple, within the slack org type ```/weather``` followed by the name of a city. And weatherBot will take care of the rest
 
 ### Notes

@@ -37,7 +37,7 @@ const findWindDirection = (deg) => {
 
 // I'm trying to use the new blocks part of the slack api
 // however I'm getting an invalid blocks message even though when I put the
-// following block in their 'block editor' it displays fine ¯\(°_o)/¯
+// following block into their 'block editor' it displays fine ¯\(°_o)/¯
 const buildCityOptionList = (cityList, cityName) => {
   const formattedCityList = cityList.map(({ name, country, id }) => {
     return {
@@ -53,7 +53,7 @@ const buildCityOptionList = (cityList, cityName) => {
     type: 'section',
     text: {
       type: 'plain_text',
-      text: `I appears there is more than one ${cityName}. Please choose your city from the list.`
+      text: `It appears there is more than one ${cityName}. Please choose your city from the list.`
     },
     accessory: {
       action_id: 'weather_location',
@@ -129,8 +129,8 @@ exports.getWeather = async (req, res) => {
   };
 
   const nestedResponse = [{
-    text: `I appears there is more than one ${text}. Please choose your city from the list.`,
-    fallback: `I appears there is more than one ${text}. Please choose your city from the list.`,
+    text: `It appears there is more than one ${text}. Please choose your city from the list.`,
+    fallback: `It appears there is more than one ${text}. Please choose your city from the list.`,
     color: '#2e963f',
     attachment_type: 'default',
     callback_id: 'weather_location',
